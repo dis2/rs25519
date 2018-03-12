@@ -3,7 +3,6 @@
 The BRS algorithm is not compatible with other implementations (there is no
 real standard). The code is loosely based on libsecp256-zkp and Chain.
 
-* Intermediate (decoy) scalars on the ring are fetched with no regard for
-  cofactor. Make sure public keys from untrusted sources are torsion-free.
-* Signature can store `m_rings*n_sigs*32` bytes of data
-* The chamaleon hash we use is sha512, the PRF of the ring salsa20+sha512/384
+* Signature can store `m_rings*n_sigs*32` bytes of data, it is implicitly
+  encrypted by knowledge of the private keys.
+* chameleon hash is ran through sha512, decoy PRF is salsa20 keyed with sha512/384

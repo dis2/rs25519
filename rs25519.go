@@ -1,6 +1,5 @@
 // Package rs25519 implements 2-way Borromean Ring Signatures (BRS) for ed25519
-
-package rs25519
+package rs25519 // import "github.com/dis2/rs25519"
 
 import "github.com/agl/ed25519/edwards25519"
 import "crypto/sha512"
